@@ -122,7 +122,7 @@ def feature_enhancement():
 
 def test_train_split_overview():
     st.title('Test-Train Split Overview')
-    st.write('We have splited our dataset evenly on the basis of user IDs by defining the following function')
+    st.write('We have splited our dataset evenly on the basis of user IDs')
     st.code('''
     for uid, group in df.groupby('userId'):
         train, test = train_test_split(group, test_size=0.5, random_state=42)
