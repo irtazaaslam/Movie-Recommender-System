@@ -122,15 +122,27 @@ def feature_enhancement():
 
 def test_train_split_overview():
     st.title('Test-Train Split Overview')
+    st.write('We have splited our dataset evenly on the basis of user IDs by defining the following function')
     st.code('''
-    train_df, test_df = train_test_split(merged_df, test_size=0.5, random_state=42)
+    for uid, group in df.groupby('userId'):
+        train, test = train_test_split(group, test_size=0.5, random_state=42)
     ''', language='python')
 
 def recommendation_abstract():
     st.title('Recommendation Abstract')
     st.write("""
-    The deep learning model was chosen for its superior ability to predict user preferences based on historical data. The model uses embedding layers for users and movies to capture the nuances of user preferences and movie characteristics.
-    """)
+    We created 2 models for collaborative filtering
+             **A Machine Learning Model Using Cosine Similarity** &
+             **A Deep Learning Model**.""")
+    st.write('The deep learning model was chosen for its superior ability to predict user preferences based on historical data. The model uses embedding layers for users and movies to capture the nuances of user preferences and movie characteristics.')
+    
+    # Display ML Model Performance
+    st.subheader("Model Evaluation:")
+    st.image("images/ML Model Performance.png",)
+
+    # Display DL Model Performance
+
+    st.image("images/DL Model Performance.png")
 
 def recommendation_demo():
     st.title("Movie Recommendation System")
