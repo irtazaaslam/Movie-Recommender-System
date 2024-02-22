@@ -1,5 +1,5 @@
 # Movie Recommendation System
-For our coding challenge we have created a movie recommender system using a kaggle dataset.
+For our project we have created a movie recommender system and a sleamit app using a kaggle dataset.
 
 This repository contains a machine learning project aimed at building a movie recommendation system. The system utilizes a deep learning model to predict user preferences based on historical data and suggests movies that users might like. The project is implemented in Python, leveraging TensorFlow for the deep learning model and Streamlit for the interactive web application.
 
